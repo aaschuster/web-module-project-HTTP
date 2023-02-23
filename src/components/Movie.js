@@ -25,6 +25,7 @@ const Movie = (props) => {
         axios.delete(`http://localhost:9000/api/movies/${id}`)
             .then(res => {
                 deleteMovie(id);
+                push("/movies");
             })
             .catch(err => console.error(err));
     }
